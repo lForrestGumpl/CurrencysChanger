@@ -1,5 +1,6 @@
-const getUrl = (currency) =>
-  `https://v6.exchangerate-api.com/v6/2a896feee96753caeb0f4768/latest/${currency}`;
+import { API_BASE, TOKEN } from "./config";
+
+const getUrl = (currency) => `${API_BASE}${TOKEN}/latest/${currency}`;
 
 async function getConversionRates(currency) {
   // Подготовка и отправка запроса на получения таблицы цен
